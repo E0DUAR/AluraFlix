@@ -1,0 +1,30 @@
+.principal {
+    background-color: #040404;
+    color: #2271d1;
+    border: 4px solid #2271D1;
+    box-shadow: inset 0 0 15px rgba(34, 113, 209, 0.6);
+}
+
+.secundario {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.boton {
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 180px;
+    height: 54px;
+    white-space: nowrap;
+  }
+  
+  .icono {
+    margin-right: 8px; /* Espaciado entre el icono y el texto */
+  }
+  
