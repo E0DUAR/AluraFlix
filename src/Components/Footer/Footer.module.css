@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 50px;
+    margin: 0px auto;
+    background-color: #090f16;
+    position: relative;
+    box-shadow: 0 -10px 15px -5px rgba(0, 0, 255, 0.6);
+  }
+  
+  .container::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #2271D1, #00BFFF);
+  }
