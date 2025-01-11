@@ -13,9 +13,10 @@ const Categoria = ({ datos }) => {
 
 
     <div className={styles.categoria}>
-       <h2>{datos}</h2>
-      <div className={styles.container}>
 
+       <span className={styles.titulo}>{datos}</span>
+
+      <div className={styles.container}>
 
         {videos
           .filter((video) => video.categoria === datos)
@@ -23,8 +24,8 @@ const Categoria = ({ datos }) => {
             <Card key={video.id} datos={video} />
           ))}
 
-
       </div>
+
     </div>
   );
 };

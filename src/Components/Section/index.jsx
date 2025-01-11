@@ -12,7 +12,7 @@ console.log("Las categorias llegaron a Section: ", categorias);
 
   return (
     <section className={styles.section}>
-      <h2>Sección de Videos</h2>
+
       {categorias && categorias.length > 0 ? (
         categorias.map((categoria) => (
           <Categoria key={categoria} datos={categoria} />
@@ -20,6 +20,7 @@ console.log("Las categorias llegaron a Section: ", categorias);
       ) : (
         <p>Cargando categorías...</p>
       )}
+      
     </section>
   );
 };

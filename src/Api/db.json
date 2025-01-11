@@ -2,26 +2,26 @@
     "videos": [
       {
         "id": "1",
-        "titulo": "Video 1",
-        "descripcion": "Descripción del video 1",
-        "url": "https://www.youtube.com/watch?v=video1",
-        "imagen": "https://www.youtube.com/watch?v=video1",
+        "titulo": "Cuándo usar let, var y const?",
+        "descripcion": "Cuándo usar let, var y const?",
+        "url": "https://youtu.be/PztCEdIJITY",
+        "imagen": "https://youtu.be/PztCEdIJITY",
         "categoria": "Front End"
       },
       {
         "id": "2",
         "titulo": "Video 1",
         "descripcion": "Descripción del video 1",
-        "url": "https://www.youtube.com/watch?v=video1",
-        "imagen": "https://www.youtube.com/watch?v=video1",
+        "url": "https://youtu.be/GJfOSoaXk4s",
+        "imagen": "https://youtu.be/GJfOSoaXk4s",
         "categoria": "Front End"
       },
       {
         "id": "3",
         "titulo": "Video 1",
         "descripcion": "Descripción del video 1",
-        "url": "https://www.youtube.com/watch?v=video1",
-        "imagen": "https://www.youtube.com/watch?v=video1",
+        "url": "https://youtu.be/rpvrLaBQwgg",
+        "imagen": "https://youtu.be/rpvrLaBQwgg",
         "categoria": "Front End"
       },
       {
