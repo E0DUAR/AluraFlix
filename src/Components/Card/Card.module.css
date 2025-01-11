@@ -1,56 +1,29 @@
 .card {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 50px;
-    align-items: center;
-    width: 30%; /* Ajusta el ancho para que 3 cards quepan en la fila */
-    margin: 10px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  align-items: center;
+  width: 30%;
+  margin: 5px;
+  border: 5px solid #6BD1FF;
+  box-shadow: inset 0px 0px 20px #6BD1FF;
+  border-radius: 10px;
+  overflow: hidden;
 }
-  
-  .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover; /* Para que la imagen se ajuste sin distorsionarse */
-    cursor: pointer; /* Indicador de que la imagen es un enlace */
-  }
-  
-  .card h4,
-  .card p {
-    padding: 10px;
-    margin: 0;
-    text-align: center;
-  }
-  
-  .acciones {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    padding: 10px;
-  }
-  
-  .acciones button {
-    padding: 5px 10px;
-    font-size: 14px;
-    cursor: pointer;
-    background-color: #ff6900; /* Color del botón */
-    border: none;
-    border-radius: 5px;
-    color: white;
-    transition: background-color 0.3s ease;
-  }
-  
-  .acciones button:hover {
-    background-color: #e65c00; /* Color de hover */
-  }
-  
-  .cardContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-  }
-  
+
+.imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.acciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 15px;
+  width: 100%;
+  border-top: 5px solid #6BD1FF;
+}

@@ -28,48 +28,48 @@
         "id": "4",
         "titulo": "Video 2",
         "descripcion": "Descripción del video 2",
-        "url": "https://www.youtube.com/watch?v=video2",
-        "imagen": "https://www.youtube.com/watch?v=video1",
+        "url": "https://youtu.be/t-iqt1b2qqk",
+        "imagen": "https://youtu.be/t-iqt1b2qqk",
         "categoria": "back End"
       },
       {
         "id": "5",
         "titulo": "Video 2",
         "descripcion": "Descripción del video 2",
-        "url": "https://www.youtube.com/watch?v=video2",
-        "imagen": "https://www.youtube.com/watch?v=video1",
+        "url": "https://youtu.be/cLLKVd5CNLc",
+        "imagen": "https://youtu.be/cLLKVd5CNLc",
         "categoria": "back End"
       },
       {
         "id": "6",
         "titulo": "Video 2",
         "descripcion": "Descripción del video 2",
-        "url": "https://www.youtube.com/watch?v=video2",
-        "imagen": "https://www.youtube.com/watch?v=video1",
+        "url": "https://youtu.be/EoPvlE85XAQ",
+        "imagen": "https://youtu.be/EoPvlE85XAQ",
         "categoria": "back End"
       },
       {
         "id": "7",
         "titulo": "Video 3",
         "descripcion": "Descripción del video 3",
-        "url": "https://www.youtube.com/watch?v=video3",
-        "imagen": "https://www.youtube.com/watch?v=video1",
+        "url": "https://youtu.be/vhwspfvI52k",
+        "imagen": "https://youtu.be/vhwspfvI52k",
         "categoria": "Innovación y Gestion"
       },
       {
         "id": "8",
         "titulo": "Video 3",
         "descripcion": "Descripción del video 3",
-        "url": "https://www.youtube.com/watch?v=video3",
-        "imagen": "https://www.youtube.com/watch?v=video1",
+        "url": "https://youtu.be/YhR7Zp8NUzE",
+        "imagen": "https://youtu.be/YhR7Zp8NUzE",
         "categoria": "Innovación y Gestion"
       },
       {
         "id": "9",
         "titulo": "Video 3",
         "descripcion": "Descripción del video 3",
-        "url": "https://www.youtube.com/watch?v=video3",
-        "imagen": "https://www.youtube.com/watch?v=video1",
+        "url": "https://youtu.be/6N3OkLCfK-0",
+        "imagen": "https://youtu.be/6N3OkLCfK-0",
         "categoria": "Innovación y Gestion"
       }
     ],

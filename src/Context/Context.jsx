@@ -6,6 +6,7 @@ export const Provider = ({ children }) => {
   //*** Aqui van los estados que se van a compartir entre componentes
   const [videos, setVideos] = useState([]);
   const [categorias, setCategorias] = useState([]);
+  const [mostrarEditar, setMostrarEditar] = useState(false);
 
   //*** Aqui van los métodos que se van a compartir entre componentes
 
@@ -53,7 +54,7 @@ export const Provider = ({ children }) => {
   //console.log("Valores del contexto:", { videos, categorias });
   return (
     //*** Aqui se envía el estado y los métodos a los componentes
-    <Context.Provider value={{ videos, categorias, agregarVideo, editarVideo, eliminarVideo }} >
+    <Context.Provider value={{ mostrarEditar, setMostrarEditar, videos, categorias, agregarVideo, editarVideo, eliminarVideo }} >
       {children}
     </Context.Provider>
   );
