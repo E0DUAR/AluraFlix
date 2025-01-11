@@ -1,0 +1,93 @@
+{
+    "videos": [
+      {
+        "id": "1",
+        "titulo": "Video 1",
+        "descripcion": "Descripción del video 1",
+        "url": "https://www.youtube.com/watch?v=video1",
+        "imagen": "https://www.youtube.com/watch?v=video1",
+        "categoria": "Front End"
+      },
+      {
+        "id": "2",
+        "titulo": "Video 1",
+        "descripcion": "Descripción del video 1",
+        "url": "https://www.youtube.com/watch?v=video1",
+        "imagen": "https://www.youtube.com/watch?v=video1",
+        "categoria": "Front End"
+      },
+      {
+        "id": "3",
+        "titulo": "Video 1",
+        "descripcion": "Descripción del video 1",
+        "url": "https://www.youtube.com/watch?v=video1",
+        "imagen": "https://www.youtube.com/watch?v=video1",
+        "categoria": "Front End"
+      },
+      {
+        "id": "4",
+        "titulo": "Video 2",
+        "descripcion": "Descripción del video 2",
+        "url": "https://www.youtube.com/watch?v=video2",
+        "imagen": "https://www.youtube.com/watch?v=video1",
+        "categoria": "back End"
+      },
+      {
+        "id": "5",
+        "titulo": "Video 2",
+        "descripcion": "Descripción del video 2",
+        "url": "https://www.youtube.com/watch?v=video2",
+        "imagen": "https://www.youtube.com/watch?v=video1",
+        "categoria": "back End"
+      },
+      {
+        "id": "6",
+        "titulo": "Video 2",
+        "descripcion": "Descripción del video 2",
+        "url": "https://www.youtube.com/watch?v=video2",
+        "imagen": "https://www.youtube.com/watch?v=video1",
+        "categoria": "back End"
+      },
+      {
+        "id": "7",
+        "titulo": "Video 3",
+        "descripcion": "Descripción del video 3",
+        "url": "https://www.youtube.com/watch?v=video3",
+        "imagen": "https://www.youtube.com/watch?v=video1",
+        "categoria": "Innovación y Gestion"
+      },
+      {
+        "id": "8",
+        "titulo": "Video 3",
+        "descripcion": "Descripción del video 3",
+        "url": "https://www.youtube.com/watch?v=video3",
+        "imagen": "https://www.youtube.com/watch?v=video1",
+        "categoria": "Innovación y Gestion"
+      },
+      {
+        "id": "9",
+        "titulo": "Video 3",
+        "descripcion": "Descripción del video 3",
+        "url": "https://www.youtube.com/watch?v=video3",
+        "imagen": "https://www.youtube.com/watch?v=video1",
+        "categoria": "Innovación y Gestion"
+      }
+    ],
+    "categorias": [
+      {
+        "id": "1",
+        "nombre": "front End",
+        "color": "#6bd1ff"
+      },
+      {
+        "id": "2",
+        "nombre": "back End",
+        "color": "#00c86f"
+      },
+      {
+        "id": "3",
+        "nombre": "Innovación y Gestion",
+        "color": "#ffba05"
+      }
+    ]
+  }
