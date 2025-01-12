@@ -1,5 +1,5 @@
 import styles from "./EditarVideo.module.css";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect  } from "react";
 import { UseContext } from "../../Context/Context";
 import Formulario from "../Formulario/index";
 
@@ -8,6 +8,11 @@ const EditarVideo = ({ video, onClose }) => {
   const { editarVideo } = UseContext();
   const [nuevosDatos, setNuevosDatos] = useState({ ...video });
 
+  // Sincronizar el estado con el video que se edita
+  useEffect(() => {
+    setNuevosDatos({ ...video });
+  }, [video]);
+
   // Manejar cambios en los campos de edición
   const manejarCambio = (e) => {
     const { name, value } = e.target;
@@ -15,7 +20,8 @@ const EditarVideo = ({ video, onClose }) => {
   };
 
   // Guardar los cambios al editar
-  const guardarCambios = () => {
+  const guardarCambios = (e) => {
+    e.preventDefault();
     editarVideo(video.id, nuevosDatos); // Llamar a la función del contexto
     onClose(); // Cerrar el modal
   };

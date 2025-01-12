@@ -2,10 +2,15 @@ import styles from "./Formulario.module.css";
 import Campo from "../Campo/index";
 import ListaOpciones from "../ListaOpciones/index";
 
-const Formulario = ({ datos, manejarCambio, guardarCambios, onClose }) => {
+const Formulario = ({ datos, manejarCambio, guardarCambios, onClose, }) => {
 
-
-  console.log("datos enviados desde editarVideo: ", datos.video);
+  const initialData = {
+    titulo: datos?.titulo || '',
+    imagen: datos?.imagen || '',
+    url: datos?.url || '',
+    descripcion: datos?.descripcion || '',
+    categoria: datos?.categoria || '',
+  };
 
   return (
     <form className={styles.formulario} onSubmit={guardarCambios}>
@@ -14,7 +19,7 @@ const Formulario = ({ datos, manejarCambio, guardarCambios, onClose }) => {
       <Campo
         titulo="Título"
         name="titulo"
-        value={datos.titulo}
+        value={initialData.titulo}
         onChange={manejarCambio}
         placeholder="Ingresar título"
         type="text"
@@ -24,7 +29,7 @@ const Formulario = ({ datos, manejarCambio, guardarCambios, onClose }) => {
       <Campo
         titulo="Imagen"
         name="imagen"
-        value={datos.imagen}
+        value={initialData.imagen}
         onChange={manejarCambio}
         placeholder="Ingresar URL de la imagen"
         type="text"
@@ -34,7 +39,7 @@ const Formulario = ({ datos, manejarCambio, guardarCambios, onClose }) => {
       <Campo
         titulo="Video"
         name="video"
-        value={datos.url}
+        value={initialData.url}
         onChange={manejarCambio}
         placeholder="Ingresar URL del video"
         type="text"
@@ -44,7 +49,7 @@ const Formulario = ({ datos, manejarCambio, guardarCambios, onClose }) => {
       <Campo
         titulo="Descripción"
         name="descripcion"
-        value={datos.descripcion}
+        value={initialData.descripcion}
         onChange={manejarCambio}
         placeholder="Ingresar descripción"
         type="textArea"
@@ -55,12 +60,12 @@ const Formulario = ({ datos, manejarCambio, guardarCambios, onClose }) => {
         titulo="Categoría"
         name="categoria"
         opciones={["front End", "back end", "Innovación y Gestion"]}
-        valorSeleccionado={datos.categoria}
+        valorSeleccionado={initialData.categoria}
         onChange={manejarCambio}
       />
 
       
-      <button type="submit">Guardar Cambios</button>
+      <button type="submit"> {datos?.id ? 'Actualizar Video' : 'Guardar Video'} </button>
       <button type="button" onClick={onClose}>
         Cancelar
       </button>

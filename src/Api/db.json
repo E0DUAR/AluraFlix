@@ -1,93 +1,102 @@
 {
-    "videos": [
-      {
-        "id": "1",
-        "titulo": "Cuándo usar let, var y const?",
-        "descripcion": "Cuándo usar let, var y const?",
-        "url": "https://youtu.be/PztCEdIJITY",
-        "imagen": "https://youtu.be/PztCEdIJITY",
-        "categoria": "Front End"
-      },
-      {
-        "id": "2",
-        "titulo": "Video 1",
-        "descripcion": "Descripción del video 1",
-        "url": "https://youtu.be/GJfOSoaXk4s",
-        "imagen": "https://youtu.be/GJfOSoaXk4s",
-        "categoria": "Front End"
-      },
-      {
-        "id": "3",
-        "titulo": "Video 1",
-        "descripcion": "Descripción del video 1",
-        "url": "https://youtu.be/rpvrLaBQwgg",
-        "imagen": "https://youtu.be/rpvrLaBQwgg",
-        "categoria": "Front End"
-      },
-      {
-        "id": "4",
-        "titulo": "Video 2",
-        "descripcion": "Descripción del video 2",
-        "url": "https://youtu.be/t-iqt1b2qqk",
-        "imagen": "https://youtu.be/t-iqt1b2qqk",
-        "categoria": "back End"
-      },
-      {
-        "id": "5",
-        "titulo": "Video 2",
-        "descripcion": "Descripción del video 2",
-        "url": "https://youtu.be/cLLKVd5CNLc",
-        "imagen": "https://youtu.be/cLLKVd5CNLc",
-        "categoria": "back End"
-      },
-      {
-        "id": "6",
-        "titulo": "Video 2",
-        "descripcion": "Descripción del video 2",
-        "url": "https://youtu.be/EoPvlE85XAQ",
-        "imagen": "https://youtu.be/EoPvlE85XAQ",
-        "categoria": "back End"
-      },
-      {
-        "id": "7",
-        "titulo": "Video 3",
-        "descripcion": "Descripción del video 3",
-        "url": "https://youtu.be/vhwspfvI52k",
-        "imagen": "https://youtu.be/vhwspfvI52k",
-        "categoria": "Innovación y Gestion"
-      },
-      {
-        "id": "8",
-        "titulo": "Video 3",
-        "descripcion": "Descripción del video 3",
-        "url": "https://youtu.be/YhR7Zp8NUzE",
-        "imagen": "https://youtu.be/YhR7Zp8NUzE",
-        "categoria": "Innovación y Gestion"
-      },
-      {
-        "id": "9",
-        "titulo": "Video 3",
-        "descripcion": "Descripción del video 3",
-        "url": "https://youtu.be/6N3OkLCfK-0",
-        "imagen": "https://youtu.be/6N3OkLCfK-0",
-        "categoria": "Innovación y Gestion"
-      }
-    ],
-    "categorias": [
-      {
-        "id": "1",
-        "nombre": "front End",
-        "color": "#6bd1ff"
-      },
-      {
-        "id": "2",
-        "nombre": "back End",
-        "color": "#00c86f"
-      },
-      {
-        "id": "3",
-        "nombre": "Innovación y Gestion",
-        "color": "#ffba05"
-      }
-    ]
-  }
+  "videos": [
+    {
+      "id": "1",
+      "titulo": "Cuándo usar let, var y const?",
+      "descripcion": "Cuándo usar let, var y const?",
+      "url": "https://youtu.be/PztCEdIJITY",
+      "imagen": "https://youtu.be/PztCEdIJITY",
+      "categoria": "Front End"
+    },
+    {
+      "id": "2",
+      "titulo": "Video 1",
+      "descripcion": "Descripción del video 1",
+      "url": "https://youtu.be/GJfOSoaXk4s",
+      "imagen": "https://youtu.be/GJfOSoaXk4s",
+      "categoria": "Front End"
+    },
+    {
+      "id": "3",
+      "titulo": "Video 1",
+      "descripcion": "Descripción del video 1",
+      "url": "https://youtu.be/rpvrLaBQwgg",
+      "imagen": "https://youtu.be/rpvrLaBQwgg",
+      "categoria": "Front End"
+    },
+    {
+      "id": "4",
+      "titulo": "Video 2",
+      "descripcion": "Descripción del video 2",
+      "url": "https://youtu.be/t-iqt1b2qqk",
+      "imagen": "https://youtu.be/t-iqt1b2qqk",
+      "categoria": "back End"
+    },
+    {
+      "id": "5",
+      "titulo": "Video 2",
+      "descripcion": "Descripción del video 2",
+      "url": "https://youtu.be/cLLKVd5CNLc",
+      "imagen": "https://youtu.be/cLLKVd5CNLc",
+      "categoria": "back End"
+    },
+    {
+      "id": "6",
+      "titulo": "Video 2",
+      "descripcion": "Descripción del video 2",
+      "url": "https://youtu.be/EoPvlE85XAQ",
+      "imagen": "https://youtu.be/EoPvlE85XAQ",
+      "categoria": "back End"
+    },
+    {
+      "id": "7",
+      "titulo": "Video 3",
+      "descripcion": "Descripción del video 3",
+      "url": "https://youtu.be/vhwspfvI52k",
+      "imagen": "https://youtu.be/vhwspfvI52k",
+      "categoria": "Innovación y Gestion"
+    },
+    {
+      "id": "8",
+      "titulo": "Video 3",
+      "descripcion": "Descripción del video 3",
+      "url": "https://youtu.be/YhR7Zp8NUzE",
+      "imagen": "https://youtu.be/YhR7Zp8NUzE",
+      "categoria": "Innovación y Gestion"
+    },
+    {
+      "id": "9",
+      "titulo": "Video 3",
+      "descripcion": "Descripción del video 3",
+      "url": "https://youtu.be/6N3OkLCfK-0",
+      "imagen": "https://youtu.be/6N3OkLCfK-0",
+      "categoria": "Innovación y Gestion"
+    },
+    {
+      "id": "9323",
+      "titulo": "Motivación y Buenos Hábitos: Claves para Estudiar con Éxito #aluratips",
+      "imagen": "https://youtu.be/TNJbxPaB6cA",
+      "url": "",
+      "descripcion": "Motivación y Buenos Hábitos: Claves para Estudiar con Éxito #aluratips",
+      "categoria": "Innovación y Gestion",
+      "video": "https://youtu.be/TNJbxPaB6cA"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "1",
+      "nombre": "front End",
+      "color": "#6bd1ff"
+    },
+    {
+      "id": "2",
+      "nombre": "back End",
+      "color": "#00c86f"
+    },
+    {
+      "id": "3",
+      "nombre": "Innovación y Gestion",
+      "color": "#ffba05"
+    }
+  ]
+}
