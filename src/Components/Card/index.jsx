@@ -12,22 +12,21 @@ const obtenerIdVideo = (url) => {
   return matches ? matches[1] : null;
 };
 
-const Card = ({ datos }) => {
 
 
-  const { eliminarVideo, mostrarEditar, setMostrarEditar } = UseContext();
-
-  //console.log("id: ", datos.id);
 
 
-  // Obtener el ID del video de YouTube para construir la URL de la miniatura
+
+const Card = ({ datos, color }) => {
+
+  const { mostrarEditar, setMostrarEditar } = UseContext();
   const videoId = obtenerIdVideo(datos.url);
-  const miniaturaUrl = videoId
-    ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
-    : "";
+  const miniaturaUrl = videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : "";
+
 
   return (
-    <div className={styles.card}>
+
+    <div className={styles.card} style={{ border: `5px solid ${color}`, boxShadow: `inset 0px 0px 20px ${color}` }}>
 
       <div className={styles.imagen}>
         {miniaturaUrl && (
@@ -37,7 +36,7 @@ const Card = ({ datos }) => {
         )}
       </div>
 
-      <div className={styles.acciones}>
+      <div className={styles.acciones} style={{ borderTop: `5px solid ${color}` }}>
         <Boton idEliminar={datos.id} BotonType="eliminar" texto="Borrar" icono={  <img src="/src/assets/iconos/borrar.png" alt="Eliminar" />  } />
         <Boton mostrar={true} BotonType="editar" texto="Editar" icono={  <img src="/src/assets/iconos/editar.png" alt="Editar" />  } />   
         

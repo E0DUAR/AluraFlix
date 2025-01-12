@@ -29,8 +29,7 @@ export const Provider = ({ children }) => {
       })
       .catch((error) => console.error("Error cargando el JSON:", error));
   }, []);
-  
-  
+ 
 
   // Función para crear videos
   const agregarVideo = (nuevoVideo) => {

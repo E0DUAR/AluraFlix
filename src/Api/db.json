@@ -30,7 +30,7 @@
       "descripcion": "Descripción del video 2",
       "url": "https://youtu.be/t-iqt1b2qqk",
       "imagen": "https://youtu.be/t-iqt1b2qqk",
-      "categoria": "back End"
+      "categoria": "Back End"
     },
     {
       "id": "5",
@@ -38,7 +38,7 @@
       "descripcion": "Descripción del video 2",
       "url": "https://youtu.be/cLLKVd5CNLc",
       "imagen": "https://youtu.be/cLLKVd5CNLc",
-      "categoria": "back End"
+      "categoria": "Back End"
     },
     {
       "id": "6",
@@ -46,7 +46,7 @@
       "descripcion": "Descripción del video 2",
       "url": "https://youtu.be/EoPvlE85XAQ",
       "imagen": "https://youtu.be/EoPvlE85XAQ",
-      "categoria": "back End"
+      "categoria": "Back End"
     },
     {
       "id": "7",
@@ -73,13 +73,36 @@
       "categoria": "Innovación y Gestion"
     },
     {
-      "id": "9323",
-      "titulo": "Motivación y Buenos Hábitos: Claves para Estudiar con Éxito #aluratips",
-      "imagen": "https://youtu.be/TNJbxPaB6cA",
+      "id": "be58",
+      "titulo": "Aprendiendo a utilizar Figma",
+      "imagen": "https://youtu.be/Y_6R3XTA2go",
+      "url": "https://youtu.be/Y_6R3XTA2go",
+      "descripcion": "Aprendiendo a utilizar Figma",
+      "categoria": "Front End"
+    },
+    {
+      "id": "24f7",
+      "titulo": "Gestión de Proyectos en Tecnología",
+      "imagen": "https://youtu.be/u3TDlT87qAw",
+      "url": "https://youtu.be/u3TDlT87qAw",
+      "descripcion": "Gestión de Proyectos en Tecnología",
+      "categoria": "Innovación y Gestion"
+    },
+    {
+      "id": "2833",
+      "titulo": "¿Cuál es la diferencia entre Front End y Back End? ",
+      "imagen": "https://youtu.be/R9uaBxgCkyA",
+      "url": "https://youtu.be/R9uaBxgCkyA",
+      "descripcion": "¿Cuál es la diferencia entre Front End y Back End? ",
+      "categoria": "Front End"
+    },
+    {
+      "id": "58ad",
+      "titulo": "",
+      "imagen": "",
       "url": "",
-      "descripcion": "Motivación y Buenos Hábitos: Claves para Estudiar con Éxito #aluratips",
-      "categoria": "Innovación y Gestion",
-      "video": "https://youtu.be/TNJbxPaB6cA"
+      "descripcion": "",
+      "categoria": "Innovación y Gestion"
     }
   ],
   "categorias": [
@@ -90,7 +113,7 @@
     },
     {
       "id": "2",
-      "nombre": "back End",
+      "nombre": "Back End",
       "color": "#00c86f"
     },
     {

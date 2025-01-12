@@ -38,7 +38,7 @@ const Formulario = ({ datos, manejarCambio, guardarCambios, onClose, }) => {
       
       <Campo
         titulo="Video"
-        name="video"
+        name="url"
         value={initialData.url}
         onChange={manejarCambio}
         placeholder="Ingresar URL del video"
@@ -59,7 +59,7 @@ const Formulario = ({ datos, manejarCambio, guardarCambios, onClose, }) => {
       <ListaOpciones
         titulo="Categoría"
         name="categoria"
-        opciones={["front End", "back end", "Innovación y Gestion"]}
+        opciones={["Front End", "Back End", "Innovación y Gestion"]}
         valorSeleccionado={initialData.categoria}
         onChange={manejarCambio}
       />

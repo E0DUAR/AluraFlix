@@ -7,10 +7,14 @@
 .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
 }
 
 .titulo{
-    background-color: #6BD1FF;
+    background-color: #6BD1FF; /*El color deberia ser condicional*/
+    
     padding: 20px;
     font-family: 'roboto' sans-serif;
     font-weight: 600;
