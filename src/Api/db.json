@@ -2,7 +2,7 @@
   "videos": [
     {
       "id": "1",
-      "titulo": "Cuándo usar let, var y const?",
+      "titulo": "Cuándo usar let, var y const? Actualizado",
       "descripcion": "Cuándo usar let, var y const?",
       "url": "https://youtu.be/PztCEdIJITY",
       "imagen": "https://youtu.be/PztCEdIJITY",
@@ -97,12 +97,12 @@
       "categoria": "Front End"
     },
     {
-      "id": "58ad",
-      "titulo": "",
-      "imagen": "",
-      "url": "",
-      "descripcion": "",
-      "categoria": "Innovación y Gestion"
+      "id": "ca90",
+      "titulo": "Alura: De Front End a Back End con Java",
+      "imagen": "https://youtu.be/3aK3Omo2RrU",
+      "url": "https://youtu.be/3aK3Omo2RrU",
+      "descripcion": "De Front End a Back End con Java",
+      "categoria": "Back End"
     }
   ],
   "categorias": [

@@ -12,14 +12,14 @@ const obtenerIdVideo = (url) => {
   return matches ? matches[1] : null;
 };
 
-
-
-
-
-
 const Card = ({ datos, color }) => {
 
-  const { mostrarEditar, setMostrarEditar } = UseContext();
+  
+  const { videoEnEdicion, setVideoEnEdicion, eliminarVideo } = UseContext();
+
+
+  console.log("Videos: Categoria => card: ", datos.id);
+
   const videoId = obtenerIdVideo(datos.url);
   const miniaturaUrl = videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : "";
 
@@ -32,25 +32,37 @@ const Card = ({ datos, color }) => {
         {miniaturaUrl && (
           <a href={datos.url} target="_blank" rel="noopener noreferrer">
             <img src={miniaturaUrl} alt={datos.titulo} />
+
+            <p style={{ textAlign: "center" }} >{datos.id}</p>
+
           </a>
         )}
       </div>
 
       <div className={styles.acciones} style={{ borderTop: `5px solid ${color}` }}>
-        <Boton idEliminar={datos.id} BotonType="eliminar" texto="Borrar" icono={  <img src="/src/assets/iconos/borrar.png" alt="Eliminar" />  } />
-        <Boton mostrar={true} BotonType="editar" texto="Editar" icono={  <img src="/src/assets/iconos/editar.png" alt="Editar" />  } />   
         
+        <Boton 
+            onClick={() => { eliminarVideo(datos.id) }}
+            BotonType="eliminar" 
+            texto="Borrar" 
+            icono={  <img src="/src/assets/iconos/borrar.png" alt="Eliminar" />  } 
+        />
+
+        <Boton 
+            mostrar={true} 
+            BotonType="editar" 
+            texto="Editar" 
+            icono={  <img src="/src/assets/iconos/editar.png" alt="Editar" />  }
+            onClick={() => { setVideoEnEdicion(datos.id) }}
+        /> 
+
       </div>
 
-      {mostrarEditar && (
-        <div className={styles.modal}>
-          <div className={styles.modalContenido}>
-            <EditarVideo
-              video={datos}
-              onClose={() => setMostrarEditar(false)}
-            />
-          </div>
-        </div>
+      {videoEnEdicion === datos.id && (
+        <EditarVideo
+          video={datos}
+          onClose={() => setVideoEnEdicion(null)}
+        />
       )}
 
     </div>

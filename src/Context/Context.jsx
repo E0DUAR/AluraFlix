@@ -8,6 +8,8 @@ export const Provider = ({ children }) => {
   const [categorias, setCategorias] = useState([]);
   const [mostrarEditar, setMostrarEditar] = useState(false);
 
+  const [videoEnEdicion, setVideoEnEdicion] = useState(null);
+
   //*** Aqui van los métodos que se van a compartir entre componentes
 
   // Cargar base de datos
@@ -18,12 +20,11 @@ export const Provider = ({ children }) => {
         return response.json();
       })
       .then((data) => {
-        console.log("Datos recibidos del servidor:", data);
   
-        // Actualizar el estado de videos
+        
         setVideos(data);
   
-        // Extraer categorías únicas
+       
         const categoriasUnicas = [...new Set(data.map((video) => video.categoria))];
         setCategorias(categoriasUnicas);
       })
@@ -43,17 +44,30 @@ export const Provider = ({ children }) => {
         video.id === id ? { ...video, ...nuevosDatos } : video
       )
     );
+    setVideoEnEdicion(null);
   };
 
-  // Función para eliminar un video
   const eliminarVideo = (id) => {
-    setVideos((prevVideos) => prevVideos.filter((video) => video.id !== id));
+
+    fetch(`http://localhost:5000/videos/${id}`, {
+      method: "DELETE",
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Error en la respuesta de la API");
+        }
+        
+        setVideos((prevVideos) => prevVideos.filter((video) => video.id !== id));
+      })
+      .catch((error) => {
+        console.error("Error eliminando el video:", error);
+
+      });
   };
 
-  //console.log("Valores del contexto:", { videos, categorias });
   return (
     //*** Aqui se envía el estado y los métodos a los componentes
-    <Context.Provider value={{ mostrarEditar, setMostrarEditar, videos, categorias, agregarVideo, editarVideo, eliminarVideo }} >
+    <Context.Provider value={{ videoEnEdicion, setVideoEnEdicion ,mostrarEditar, setMostrarEditar, videos, categorias, agregarVideo, editarVideo, eliminarVideo }} >
       {children}
     </Context.Provider>
   );

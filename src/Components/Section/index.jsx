@@ -8,14 +8,14 @@ const Section = () => {
 
 const { categorias  } = UseContext(); 
 
-console.log("Las categorias llegaron a Section: ", categorias);
+console.log("Categorias: Context => Section", categorias);
 
   return (
     <section className={styles.section}>
 
       {categorias && categorias.length > 0 ? (
         categorias.map((categoria) => (
-          <Categoria key={categoria} datos={categoria} />
+          <Categoria key={categoria} nombreCategoria={categoria} />
         ))
       ) : (
         <p>Cargando categorías...</p>

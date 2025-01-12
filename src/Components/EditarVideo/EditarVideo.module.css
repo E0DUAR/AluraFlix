@@ -1,0 +1,22 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(3, 18, 47, 0.8); /* Fondo con opacidad */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.modalContent {
+  background-color: #03122f; /* Color sólido para el contenido del modal */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Ajusta el ancho según sea necesario */
+  border: 3px solid #6BD1FF;
+  padding: 20px 100px;
+}

@@ -30,6 +30,9 @@ const NuevoVideo = () => {
 
   // Función para manejar el guardado de los datos
   const guardarCambios = (e) => {
+
+
+    
     e.preventDefault();
 
     // Enviar el nuevo video a la API usando fetch

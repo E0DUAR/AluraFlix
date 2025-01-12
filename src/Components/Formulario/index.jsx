@@ -13,7 +13,7 @@ const Formulario = ({ datos, manejarCambio, guardarCambios, onClose, }) => {
   };
 
   return (
-    <form className={styles.formulario} onSubmit={guardarCambios}>
+    <form className={styles.formulario} onSubmit={guardarCambios} guardarCambios={guardarCambios}>
       
      
       <Campo
