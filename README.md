@@ -19,7 +19,7 @@ Este proyecto es una aplicación web diseñada para la gestión de una colecció
 - **Backend**:  
   - Servidor externo con API REST para el manejo de datos.
 - **Lenguajes**:  
-  - JavaScript: Lógica de la aplicación.
+  - React y JavaScript: Lógica de la aplicación.
   - HTML y CSS: Estructura y diseño de la interfaz.
 - **Herramientas adicionales**:  
   - Fetch API: Realización de solicitudes HTTP.
