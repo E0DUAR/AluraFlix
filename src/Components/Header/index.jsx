@@ -16,7 +16,7 @@ const Header = ({ page }) => {
     <>
       <div className={container}>
       <Link to="/" element={<Inicio />}>
-        <img src="/.src/.assets/.logo.png" alt="Logo Alura" />
+        <img src="./src./assets./logo.png" alt="Logo Alura" />
         </Link>
 
         <div className={styles.menu}>
