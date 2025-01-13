@@ -24,3 +24,6 @@ Este proyecto es una aplicación web diseñada para la gestión de una colecció
 - **Herramientas adicionales**:  
   - Fetch API: Realización de solicitudes HTTP.
   - JSON Server (opcional): Servidor remoto para pruebas y desarrollo.
+
+## Link de acceso:
+- https://alura-flix-otelukl2m-eduardos-projects-0b5fd4f3.vercel.app/
