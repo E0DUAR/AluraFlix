@@ -7,7 +7,6 @@ export const Provider = ({ children }) => {
   const [videos, setVideos] = useState([]);
   const [categorias, setCategorias] = useState([]);
   const [mostrarEditar, setMostrarEditar] = useState(false);
-
   const [videoEnEdicion, setVideoEnEdicion] = useState(null);
 
   //*** Aqui van los métodos que se van a compartir entre componentes
@@ -21,9 +20,7 @@ export const Provider = ({ children }) => {
       })
       .then((data) => {
   
-        
         setVideos(data);
-  
        
         const categoriasUnicas = [...new Set(data.map((video) => video.categoria))];
         setCategorias(categoriasUnicas);
@@ -32,21 +29,66 @@ export const Provider = ({ children }) => {
   }, []);
  
 
-  // Función para crear videos
-  const agregarVideo = (nuevoVideo) => {
-    setVideos((prevVideos) => [...prevVideos, nuevoVideo]);
+  // guardar video
+  const agregarVideo = async (nuevoVideo) => {
+    try {
+      const response = await fetch("http://localhost:5000/videos", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(nuevoVideo),
+      });
+  
+      if (!response.ok) {
+        throw new Error("Error al guardar el video en la API.");
+      }
+  
+      const data = await response.json();
+  
+      setVideos((prevVideos) => [...prevVideos, data]);
+  
+      return { success: true, video: data }; 
+    } catch (error) {
+      console.error("Error en agregarVideo:", error);
+      return { success: false, error }; 
+    }
   };
+  
 
-  // Función para editar un video
-  const editarVideo = (id, nuevosDatos) => {
-    setVideos((prevVideos) =>
-      prevVideos.map((video) =>
-        video.id === id ? { ...video, ...nuevosDatos } : video
-      )
-    );
-    setVideoEnEdicion(null);
+  const editarVideo = async (id, nuevosDatos) => {
+    try {
+      const response = await fetch(`http://localhost:5000/videos/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(nuevosDatos),
+      });
+  
+      if (!response.ok) {
+        throw new Error("Error al editar el video en la API.");
+      }
+  
+      const data = await response.json();
+  
+      // Actualizar el estado con el video editado
+      setVideos((prevVideos) =>
+        prevVideos.map((video) =>
+          video.id === id ? { ...video, ...data } : video
+        )
+      );
+  
+      return { success: true, video: data }; // Devuelve el video editado
+    } catch (error) {
+      console.error("Error en editarVideo:", error);
+      return { success: false, error }; // Devuelve información del error
+    }
   };
+  
 
+
+  // eliminar videos
   const eliminarVideo = (id) => {
 
     fetch(`http://localhost:5000/videos/${id}`, {

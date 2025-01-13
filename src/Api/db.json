@@ -2,7 +2,7 @@
   "videos": [
     {
       "id": "1",
-      "titulo": "Cuándo usar let, var y const? Actualizado",
+      "titulo": "Cuándo usar let, var y const?",
       "descripcion": "Cuándo usar let, var y const?",
       "url": "https://youtu.be/PztCEdIJITY",
       "imagen": "https://youtu.be/PztCEdIJITY",
@@ -66,42 +66,18 @@
     },
     {
       "id": "9",
-      "titulo": "Video 3",
+      "titulo": "Methodologias agiles",
       "descripcion": "Descripción del video 3",
       "url": "https://youtu.be/6N3OkLCfK-0",
       "imagen": "https://youtu.be/6N3OkLCfK-0",
       "categoria": "Innovación y Gestion"
     },
     {
-      "id": "be58",
-      "titulo": "Aprendiendo a utilizar Figma",
-      "imagen": "https://youtu.be/Y_6R3XTA2go",
-      "url": "https://youtu.be/Y_6R3XTA2go",
-      "descripcion": "Aprendiendo a utilizar Figma",
-      "categoria": "Front End"
-    },
-    {
-      "id": "24f7",
-      "titulo": "Gestión de Proyectos en Tecnología",
-      "imagen": "https://youtu.be/u3TDlT87qAw",
-      "url": "https://youtu.be/u3TDlT87qAw",
-      "descripcion": "Gestión de Proyectos en Tecnología",
-      "categoria": "Innovación y Gestion"
-    },
-    {
-      "id": "2833",
-      "titulo": "¿Cuál es la diferencia entre Front End y Back End? ",
-      "imagen": "https://youtu.be/R9uaBxgCkyA",
-      "url": "https://youtu.be/R9uaBxgCkyA",
-      "descripcion": "¿Cuál es la diferencia entre Front End y Back End? ",
-      "categoria": "Front End"
-    },
-    {
-      "id": "ca90",
-      "titulo": "Alura: De Front End a Back End con Java",
-      "imagen": "https://youtu.be/3aK3Omo2RrU",
-      "url": "https://youtu.be/3aK3Omo2RrU",
-      "descripcion": "De Front End a Back End con Java",
+      "id": "bd80",
+      "titulo": "Spring Framework. ¿Qué es ? ",
+      "imagen": "https://youtu.be/FqztWwPIrKo",
+      "url": "https://youtu.be/FqztWwPIrKo",
+      "descripcion": "Spring Framework. ¿Qué es ? ",
       "categoria": "Back End"
     }
   ],

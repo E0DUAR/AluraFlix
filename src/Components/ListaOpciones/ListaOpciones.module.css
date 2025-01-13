@@ -1,26 +1,34 @@
 .listaOpciones {
-    margin-bottom: 20px;
-  }
-  
-  .listaOpciones label {
-    display: block;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  
-  .listaOpciones select {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    background-color: #fff;
-    cursor: pointer;
-  }
-  
-  .listaOpciones select:focus {
-    border-color: #6278F7;
-    box-shadow: 0 0 5px rgba(98, 120, 247, 0.5);
-  }
+  margin-bottom: 20px;
+}
+
+.listaOpciones label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.listaOpciones select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #262626;
+  border-radius: 5px;
+  outline: none;
+  background-color: transparent; /* Fondo transparente */
+  color: #fff; /* Texto blanco */
+  cursor: pointer;
+  appearance: none; /* Quitar estilos predeterminados */
+}
+
+.listaOpciones select option {
+  background-color: #333; /* Fondo oscuro para opciones desplegadas */
+  color: #fff; /* Texto blanco */
+}
+
+.listaOpciones select:focus {
+  border-color: #6278F7;
+  box-shadow: 0 0 5px rgba(98, 120, 247, 0.5);
+}

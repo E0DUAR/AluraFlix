@@ -33,8 +33,6 @@ const Card = ({ datos, color }) => {
           <a href={datos.url} target="_blank" rel="noopener noreferrer">
             <img src={miniaturaUrl} alt={datos.titulo} />
 
-            <p style={{ textAlign: "center" }} >{datos.id}</p>
-
           </a>
         )}
       </div>

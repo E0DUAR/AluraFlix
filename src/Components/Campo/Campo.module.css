@@ -13,12 +13,40 @@
     width: 100%;
     padding: 10px;
     font-size: 14px;
-    border: 1px solid #ccc;
+    border: 1px solid #262626;
     border-radius: 5px;
     outline: none;
+    background-color: transparent;
+    color: #fff;
+  }
+  .campo textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #262626;
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
   }
   
   .campo input:focus {
     border-color: #6278F7;
     box-shadow: 0 0 5px rgba(98, 120, 247, 0.5);
   }
+
+  .campo textarea:focus {
+    border-color: #6278F7;
+    box-shadow: 0 0 5px rgba(98, 120, 247, 0.5);
+  }
+
+.campo label {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.campo input::placeholder {
+  color: #A5A5A5;
+  font-size: 15px;
+}

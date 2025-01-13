@@ -17,38 +17,35 @@ const EditarVideo = ({ video, onClose }) => {
     setNuevosDatos({ ...nuevosDatos, [name]: value });
   };
 
-  const guardarCambios = (e) => {
+  const guardarCambios = async (e) => {
     e.preventDefault();
-
-    fetch(`http://localhost:5000/videos/${video.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(nuevosDatos),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Error en la respuesta de la API");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        editarVideo(video.id, data);
-        onClose();
-      })
-      .catch((error) => {
-        console.error("Error actualizando el video:", error);
-        setMensajeError("Hubo un error al actualizar el video.");
-      });
+  
+    const resultado = await editarVideo(video.id, nuevosDatos);
+  
+    if (resultado.success) {
+      onClose(); 
+    } else {
+      console.error("Error actualizando el video:", resultado.error);
+      setMensajeError("Hubo un error al actualizar el video.");
+    }
   };
+  
+
+
+    // Función para manejar clics en el overlay
+    const handleOverlayClick = (e) => {
+      if (e.target === e.currentTarget) {
+        onClose();
+      }
+    };
 
   return (
-    <div className={styles.modalOverlay}>
+    <div className={styles.modalOverlay} onClick={handleOverlayClick}>
       <div className={styles.modalContent}>
-        <button onClick={onClose}>Cerrar</button>
 
-        <h2>Editar Video</h2>
+        <button className={styles.cerrar} onClick={onClose}>X</button>
+
+        <h2>EDITAR VIDEO</h2>
 
         <Formulario
           datos={nuevosDatos}

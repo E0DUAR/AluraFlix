@@ -64,11 +64,15 @@ const Formulario = ({ datos, manejarCambio, guardarCambios, onClose, }) => {
         onChange={manejarCambio}
       />
 
+      <div className={styles.contBotones}>
+
       
-      <button type="submit"> {datos?.id ? 'Actualizar Video' : 'Guardar Video'} </button>
-      <button type="button" onClick={onClose}>
+      <button type="submit" className={styles.enviar}> {datos?.id ? 'Actualizar Video' : 'Guardar Video'} </button>
+
+      <button type="button" onClick={onClose} className={styles.cancelar}>
         Cancelar
       </button>
+      </div>
 
      
     </form>

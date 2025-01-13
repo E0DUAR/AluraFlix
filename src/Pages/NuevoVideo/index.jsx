@@ -4,9 +4,12 @@ import Footer from "../../Components/Footer";
 import { useState, useContext } from "react";
 import { UseContext } from "../../Context/Context";
 import Formulario from "../../Components/Formulario";
+import { useNavigate } from "react-router-dom";
+
 
 const NuevoVideo = () => {
   const { agregarVideo } = UseContext();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     titulo: "",
@@ -28,61 +31,59 @@ const NuevoVideo = () => {
     }));
   };
 
-  // Función para manejar el guardado de los datos
-  const guardarCambios = (e) => {
-
-
-    
+  const guardarCambios = async (e) => {
     e.preventDefault();
-
-    // Enviar el nuevo video a la API usando fetch
-    fetch("http://localhost:5000/videos", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        // 1. Guardar el video en el estado local si la respuesta es exitosa
-        agregarVideo(data);  // Asegúrate de pasar la respuesta completa si quieres el video con ID asignado
-
-        // 2. Mostrar mensaje de éxito
-        setMensajeExito("Video guardado exitosamente.");
-
-        // 3. Restablecer formulario
-        setFormData({
-          titulo: "",
-          imagen: "",
-          url: "",
-          descripcion: "",
-          categoria: "",
-        });
-      })
-      .catch((error) => {
-        console.error("Error guardando el video:", error);
-        setMensajeError("Hubo un error al guardar el video.");
+  
+    const resultado = await agregarVideo(formData);
+  
+    if (resultado.success) {
+      setMensajeExito("Video guardado exitosamente.");
+      setFormData({
+        titulo: "",
+        imagen: "",
+        url: "",
+        descripcion: "",
+        categoria: "",
       });
+      navigate("/");
+    } else {
+      console.error("Error guardando el video:", resultado.error);
+      setMensajeError("Hubo un error al guardar el video.");
+    }
   };
+  
 
   // Función para manejar el cierre
   const onClose = () => {
     console.log("Formulario cerrado");
-    // Lógica para cerrar el formulario o redirigir
+    navigate("/");
   };
 
   return (
     <>
       <Header page="nuevoVideo" />
-      <Formulario
-        datos={formData}
-        manejarCambio={manejarCambio}
-        guardarCambios={guardarCambios}
-        onClose={onClose}
-      />
-      {mensajeExito && <div className="mensajeExito">{mensajeExito}</div>}
-      {mensajeError && <div className="mensajeError">{mensajeError}</div>}
+
+      <section className={styles.container}>
+
+        <div className={styles.content}>
+        <h2>NUEVO VIDEO</h2>
+          <p>Complete el formulario para crear una nueva tarjeta de video</p>
+
+          <span></span>
+          <h3>Crear Tarjeta</h3>
+          <span></span>
+
+          <Formulario
+            datos={formData}
+            manejarCambio={manejarCambio}
+            guardarCambios={guardarCambios}
+            onClose={onClose}
+          />
+          {mensajeError && <div className="mensajeError">{mensajeError}</div>}
+        </div>
+
+      </section>
+
       <Footer />
     </>
   );
