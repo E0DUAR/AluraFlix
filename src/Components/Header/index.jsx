@@ -3,6 +3,7 @@ import Inicio from "../../Pages/Inicio";
 import NuevoVideo from "../../Pages/NuevoVideo";
 import { Link } from "react-router-dom";
 import Boton from "../../Components/Boton";
+import logo from '../../assets/logo.png';
 
 const Header = ({ page }) => {
   const container =
@@ -16,7 +17,7 @@ const Header = ({ page }) => {
     <>
       <div className={container}>
       <Link to="/" element={<Inicio />}>
-        <img src="./src./assets/logo.png" alt="Logo Alura" />
+      <img src={logo} alt="Logo Alura" />
         </Link>
 
         <div className={styles.menu}>
