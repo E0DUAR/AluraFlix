@@ -10,7 +10,7 @@
     },
     {
       "id": "2",
-      "titulo": "Video 1",
+      "titulo": "¿Que es Javascript?",
       "descripcion": "Descripción del video 1",
       "url": "https://youtu.be/GJfOSoaXk4s",
       "imagen": "https://youtu.be/GJfOSoaXk4s",
@@ -26,7 +26,7 @@
     },
     {
       "id": "4",
-      "titulo": "Video 2",
+      "titulo": "Spring Framework",
       "descripcion": "Descripción del video 2",
       "url": "https://youtu.be/t-iqt1b2qqk",
       "imagen": "https://youtu.be/t-iqt1b2qqk",
@@ -79,23 +79,6 @@
       "url": "https://youtu.be/FqztWwPIrKo",
       "descripcion": "Spring Framework. ¿Qué es ? ",
       "categoria": "Back End"
-    }
-  ],
-  "categorias": [
-    {
-      "id": "1",
-      "nombre": "front End",
-      "color": "#6bd1ff"
-    },
-    {
-      "id": "2",
-      "nombre": "Back End",
-      "color": "#00c86f"
-    },
-    {
-      "id": "3",
-      "nombre": "Innovación y Gestion",
-      "color": "#ffba05"
     }
   ]
 }

@@ -1,120 +1,119 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 
+//const API_BASE_URL = "http://localhost:5000";
+
+const API_BASE_URL = "https://678466941ec630ca33a460a0.mockapi.io/videos";
+
+const apiFetch = async (endpoint, options = {}) => {
+  const response = await fetch(`${API_BASE_URL}${endpoint}`, options);
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message || "Error en la API");
+  }
+  return response.json();
+};
+
 const Context = createContext();
 
 export const Provider = ({ children }) => {
-  //*** Aqui van los estados que se van a compartir entre componentes
+  
+  // Estados compartidos entre componentes
   const [videos, setVideos] = useState([]);
   const [categorias, setCategorias] = useState([]);
   const [mostrarEditar, setMostrarEditar] = useState(false);
   const [videoEnEdicion, setVideoEnEdicion] = useState(null);
 
-  //*** Aqui van los métodos que se van a compartir entre componentes
-
   // Cargar base de datos
   useEffect(() => {
-    fetch("http://localhost:5000/videos")
-      .then((response) => {
-        console.log("Estado de la respuesta:", response.status);
-        return response.json();
-      })
-      .then((data) => {
-  
+    const cargarVideos = async () => {
+      try {
+        const data = await apiFetch("/videos");
         setVideos(data);
-       
-        const categoriasUnicas = [...new Set(data.map((video) => video.categoria))];
+        const categoriasUnicas = [
+          ...new Set(data.map((video) => video.categoria)),
+        ];
         setCategorias(categoriasUnicas);
-      })
-      .catch((error) => console.error("Error cargando el JSON:", error));
-  }, []);
- 
+      } catch (error) {
+        console.error("Error cargando el JSON:", error);
+      }
+    };
 
-  // guardar video
+    cargarVideos();
+  }, []);
+
+  // Guardar video
   const agregarVideo = async (nuevoVideo) => {
     try {
-      const response = await fetch("http://localhost:5000/videos", {
+      const data = await apiFetch("/videos", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(nuevoVideo),
       });
-  
-      if (!response.ok) {
-        throw new Error("Error al guardar el video en la API.");
-      }
-  
-      const data = await response.json();
-  
       setVideos((prevVideos) => [...prevVideos, data]);
-  
-      return { success: true, video: data }; 
+      return { success: true, video: data };
     } catch (error) {
       console.error("Error en agregarVideo:", error);
-      return { success: false, error }; 
+      return { success: false, error };
     }
   };
-  
 
+  // Editar video
   const editarVideo = async (id, nuevosDatos) => {
     try {
-      const response = await fetch(`http://localhost:5000/videos/${id}`, {
+      const data = await apiFetch(`/videos/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(nuevosDatos),
       });
-  
-      if (!response.ok) {
-        throw new Error("Error al editar el video en la API.");
-      }
-  
-      const data = await response.json();
-  
-      // Actualizar el estado con el video editado
+
       setVideos((prevVideos) =>
         prevVideos.map((video) =>
           video.id === id ? { ...video, ...data } : video
         )
       );
-  
-      return { success: true, video: data }; // Devuelve el video editado
+
+      return { success: true, video: data };
     } catch (error) {
       console.error("Error en editarVideo:", error);
-      return { success: false, error }; // Devuelve información del error
+      return { success: false, error };
     }
   };
-  
 
-
-  // eliminar videos
-  const eliminarVideo = (id) => {
-
-    fetch(`http://localhost:5000/videos/${id}`, {
-      method: "DELETE",
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Error en la respuesta de la API");
-        }
-        
-        setVideos((prevVideos) => prevVideos.filter((video) => video.id !== id));
-      })
-      .catch((error) => {
-        console.error("Error eliminando el video:", error);
-
+  // Eliminar video
+  const eliminarVideo = async (id) => {
+    try {
+      await apiFetch(`/videos/${id}`, {
+        method: "DELETE",
       });
+
+      setVideos((prevVideos) => prevVideos.filter((video) => video.id !== id));
+    } catch (error) {
+      console.error("Error eliminando el video:", error);
+    }
   };
 
   return (
-    //*** Aqui se envía el estado y los métodos a los componentes
-    <Context.Provider value={{ videoEnEdicion, setVideoEnEdicion ,mostrarEditar, setMostrarEditar, videos, categorias, agregarVideo, editarVideo, eliminarVideo }} >
+    <Context.Provider
+      value={{
+        videoEnEdicion,
+        setVideoEnEdicion,
+        mostrarEditar,
+        setMostrarEditar,
+        videos,
+        categorias,
+        agregarVideo,
+        editarVideo,
+        eliminarVideo,
+      }}
+    >
       {children}
     </Context.Provider>
   );
 };
 
-// Aqui se exporta el contexto para que los componentes puedan acceder a él
-// Ejemplo: const { state, updateState } = useContext();
+// Exportar el contexto para uso en otros componentes
 export const UseContext = () => useContext(Context);
