@@ -1,4 +1,5 @@
 import styles from "./Banner.module.css";
+import imagen from "../../assets/player.png";
 
 const Banner = () => {
   return (
@@ -20,7 +21,7 @@ const Banner = () => {
 
             </div>
 
-            <img className={styles.imagen} src="/src/assets/player.png" alt="Imagen principal" />
+            <img className={styles.imagen} src={imagen} alt="Imagen principal" />
 
         </div>
 
