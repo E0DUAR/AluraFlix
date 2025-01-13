@@ -3,6 +3,8 @@ import React, { useContext, useState } from "react";
 import { UseContext } from "../../Context/Context";
 import EditarVideo from "../EditarVideo";
 import Boton from "../Boton";
+import borrar from '../../assets/iconos/borrar.png';
+import editar from '../../assets/iconos/editar.png';
 
 // Función para obtener el ID de YouTube a partir de la URL del video
 const obtenerIdVideo = (url) => {
@@ -43,14 +45,14 @@ const Card = ({ datos, color }) => {
             onClick={() => { eliminarVideo(datos.id) }}
             BotonType="eliminar" 
             texto="Borrar" 
-            icono={  <img src="/src/assets/iconos/borrar.png" alt="Eliminar" />  } 
+            icono={  <img src={borrar} alt="Eliminar" />  } 
         />
 
         <Boton 
             mostrar={true} 
             BotonType="editar" 
             texto="Editar" 
-            icono={  <img src="/src/assets/iconos/editar.png" alt="Editar" />  }
+            icono={  <img src={editar} alt="Editar" />  }
             onClick={() => { setVideoEnEdicion(datos.id) }}
         /> 
 
