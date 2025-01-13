@@ -1,9 +1,10 @@
 import styles from "./Footer.module.css"
+import logo from '../../assets/logo.png';
 
 const Footer = () => {
     return(
         <div className={styles.container}>
-            <img src="/src/assets/logo.png" alt="Logo Alura" />
+            <img src={logo} alt="Logo Alura" />
         </div>
     )   
 }
